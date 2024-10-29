@@ -1,0 +1,313 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #ffffff; /* Ensures text is white */
+}
+
+/* Full Page Background Setup */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Users/brianmchale/Documents/One Brain Together/CH✝️PS/Screen Shot 2024-09-13 at 1.06.21 PM.png'); /* Adjust path as necessary */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(10px); /* Apply blur only to the background */
+    z-index: -1; /* Send it to the back */
+}
+
+/* Content Container */
+.content {
+    position: relative;
+    width: 100%; /* Ensures the content is not shifted */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start; /* Aligns content to the top */
+    z-index: 1; /* Ensures content is above the blurred background */
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the header */
+    text-align: center;
+    z-index: 10; /* Above blurred background */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#hero h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-top: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+/* Main Content Sections */
+section {
+    margin-top: 60px; /* Adds spacing between sections */
+    width: 100%; /* Ensures the section fills the width */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text inside the section */
+}
+
+/* Buy Now Button Styling */
+#buy-now img {
+    width: 500px;  /* Set the width you want for your images */
+    height: 333px; /* Set the height you want for your images */
+    object-fit: cover;  /* Ensures the images cover the area without distorting aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the image horizontally */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    margin-top: 75px;
+}
+
+#buy-now h2 {
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+#buy-now p {
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.buy-button {
+    display: inline-block;
+    background-color: #FFBD57;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 28px;
+    border-radius: 5px;
+    margin-top: 75px;
+}
+
+/* Style for the 'OUR FLAVORS' title */
+.section-title {
+    font-size: 36px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #fff; /* White text */
+    text-align: center; /* Centers the title */
+    width: 100%; /* Ensures it spans the entire section */
+    display: block; /* Makes sure it behaves like a block element */
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black; /* Adds a shadow for readability */
+    margin-top: -150px; /* Adjust this value to fix positioning if necessary */
+}
+
+
+#flavors {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: -250px;
+}
+
+
+.flavors-title-wrapper {
+    text-align: center; /* Ensures content inside is centered */
+    width: 100%; /* Ensures it spans the full width */
+    margin-bottom: 20px; /* Adds spacing after the title */
+}
+
+
+.flavor-container {
+    text-align: center; /* Centers everything inside the container */
+    margin-bottom: 30px;
+}
+
+.flavor-container img {
+    max-width: 100%; /* Adjust this as necessary to fit the design */
+    display: block; /* Ensures the image is a block element, which is necessary for centering */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+.flavor-description {
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounds the corners */
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.flavor-description h3 {
+    font-size: 24px; /* Adjust size as needed */
+    margin-top: 10px;
+}
+
+.flavor-description p {
+    font-size: 16px; /* Adjust size as needed */
+    margin: 10px 0;
+}
+
+/* Manifesto Section Title Alignment */
+.manifesto-section {
+    text-align: center; /* Ensures that everything in the manifesto section is centered */
+    padding: 20px 50px; /* Adds padding around the content for spacing */
+    display: block; /* Overrides any flexbox settings that might be affecting layout */
+    margin-bottom: 250px;
+}
+
+.manifesto-title {
+    font-size: 30px; /* Example size, adjust as needed */
+    margin-bottom: 30px; /* Gives some space between the title and the text */
+    color: white;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.manifesto-text {
+    font-size: 18px; /* Readable text size for the paragraph */
+    color: white;
+    font-size: 20px;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+/* Pack Section */
+#pack {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: -250px;
+}
+
+.pack-container {
+    text-align: center; /* Centers everything inside the container */
+    margin-bottom: 30px;
+}
+
+.pack-container img {
+    max-width: 100%; /* Adjust this as necessary to fit the design */
+    display: block; /* Ensures the image is a block element, which is necessary for centering */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+.pack-description {
+    padding: 20px;
+    border-radius: 10px; /* Optional: Rounds the corners */
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+.pack-description h3 {
+    font-size: 24px; /* Adjust size as needed */
+    margin-top: 10px;
+}
+
+.pack-description p {
+    font-size: 16px; /* Adjust size as needed */
+    margin: 10px 0;
+}
+
+
+
+/* FAQ Section */
+#faq {
+    padding: 50px 20px;
+    background: transparent; /* Ensures there's no background color */
+    text-align: center; /* Centers all content within the FAQ section */
+    display: block;
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
+}
+
+#faq h2 {
+    margin-bottom: 20px; /* Space between the title and the content below */
+}
+
+#faq .faq-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+#faq .faq-column {
+    width: 45%; /* Adjusts the width of each FAQ column */
+    padding: 0 10px; /* Adds padding for spacing */
+}
+
+#faq .faq-column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#faq .faq-column p {
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    width: 100%; /* Ensures the footer fills the width */
+}
+
+.footer-logo {
+    max-width: 100px;
+}
