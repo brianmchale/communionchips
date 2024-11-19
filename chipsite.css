@@ -72,8 +72,8 @@ header nav ul li a {
 
 #hero h1 {
     color: #fff;
-    font-size: 36px;
-    margin-top: 20px;
+    font-size: clamp(18px, 5vw, 36px); /* Adjusts size between 18px and 36px */
+    margin-top: -250px;
     text-shadow:
         0.07em 0 black,
         0 0.07em black,
@@ -92,11 +92,11 @@ section {
 
 /* Buy Now Button Styling */
 #buy-now img {
-    width: 500px;  /* Set the width you want for your images */
-    height: 333px; /* Set the height you want for your images */
+    max-width: 90%;  /* Set the width you want for your images */
+    height: auto; /* Set the height you want for your images */
     object-fit: cover;  /* Ensures the images cover the area without distorting aspect ratio */
     display: block;
-    margin: 0 auto; /* Centers the image horizontally */
+    margin: 20px auto; /* Centers the image horizontally */
     border-radius: 10px; /* Optional: Adds rounded corners */
     margin-top: 75px;
 }
@@ -160,26 +160,24 @@ section {
 
 
 .flavor-container {
-    text-align: center; /* Centers everything inside the container */
-    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between elements */
 }
 
 .flavor-container img {
-    max-width: 100%; /* Adjust this as necessary to fit the design */
-    display: block; /* Ensures the image is a block element, which is necessary for centering */
-    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 50%; /* Adjust image size */
+    height: auto;
 }
 
 
 .flavor-description {
-    padding: 20px;
-    border-radius: 10px; /* Optional: Rounds the corners */
-    text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black;
+    max-width: 600px;
+    margin: 10px;
 }
+
 
 .flavor-description h3 {
     font-size: 24px; /* Adjust size as needed */
@@ -304,10 +302,71 @@ section {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    width: 100%; /* Ensures the footer fills the width */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
 }
 
 .footer-logo {
-    max-width: 100px;
+    max-width: 150px;
+    height: auto;
 }
+
+
+/* Other CSS code above */
+
+/* Add media queries at the end */
+@media (max-width: 1200px) {
+    /* Adjust styles for screens smaller than 1200px */
+    header nav ul li a {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    #buy-now img {
+        width: 80%; /* Make the image scale proportionally */
+    }
+
+    .flavor-container img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for tablets and smaller devices */
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero h1 {
+        font-size: 24px; /* Adjust the text size */
+    }
+
+    .flavor-description h3 {
+        font-size: 20px; /* Scale headings */
+    }
+
+    .flavor-description p {
+        font-size: 14px; /* Scale text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust styles for mobile phones */
+    header nav ul li {
+        margin: 10px 0; /* Add spacing for links */
+    }
+
+    #hero h1 {
+        font-size: 18px; /* Scale down text further */
+        margin-top: 10px;
+    }
+
+    .buy-button {
+        font-size: 16px; /* Adjust button text size */
+    }
+
+    .manifesto-text {
+        font-size: 16px; /* Reduce text size for manifesto */
+    }
+}
+
