@@ -69,16 +69,25 @@ header nav ul li a {
     font-weight: bold;
 }
 
-#hero {
+/* Main Content Sections */
+section {
+    margin-bottom: 50px; /* Adds spacing between sections */
+    width: 100%; /* Ensures the section fills the width */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text inside the section */
+    padding: 20px 0;
+}
+
+#hero {
+    padding: 60px 20px; /* Internal spacing */
+    margin-bottom: 50px; /* Space below */
     text-align: center;
 }
 
 #hero h1 {
     color: #fff;
-    font-size: 36px;
+    font-size: clamp(18px, 5vw, 36px); /* Adjusts size between 18px and 36px */
     margin-top: 20px;
     text-shadow:
         0.07em 0 black,
@@ -87,27 +96,28 @@ header nav ul li a {
         0 -0.07em black;
 }
 
-/* Main Content Sections */
-section {
-    margin-top: 60px; /* Adds spacing between sections */
-    width: 100%; /* Ensures the section fills the width */
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    text-align: center; /* Center the text inside the section */
+/* Buy Now Button Styling */
+#buy-now {
+    margin: 0; /* Reset margins */
+    padding: 20px 0; /* Internal spacing */
+    text-align: center; /* Center content */
+    outline: 1px dashed red;
 }
 
-/* Buy Now Button Styling */
 #buy-now img {
-    width: 500px;  /* Set the width you want for your images */
-    height: 333px; /* Set the height you want for your images */
-    object-fit: cover;  /* Ensures the images cover the area without distorting aspect ratio */
-    display: block;
-    margin: 0 auto; /* Centers the image horizontally */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    margin-top: 75px;
+    display: block; /* Prevent inline spacing */
+    margin: 0 auto; /* Center align image */
+    width: 40%; /* Fit image within container */
+    max-width: 100%; /* Prevent overflow */
+    margin-bottom: 0; /* No extra spacing below */
+}
+
+#buy-now > :last-child {
+    margin-bottom: 0; /* Remove unwanted space below the last element */
 }
 
 #buy-now h2 {
+    margin: 0 0 20px 0; /* Ensure uniform spacing between text elements */
     text-shadow:
         0.07em 0 black,
         0 0.07em black,
@@ -116,6 +126,7 @@ section {
 }
 
 #buy-now p {
+    margin: 0 0 20px 0; /* Ensure uniform spacing between text elements */
     text-shadow:
         0.07em 0 black,
         0 0.07em black,
@@ -131,30 +142,14 @@ section {
     text-decoration: none;
     font-size: 28px;
     border-radius: 5px;
-    margin-top: 75px;
-}
-
-/* Style for the 'OUR FLAVORS' title */
-.section-title {
-    font-size: 36px; /* Adjust the size as needed */
-    font-weight: bold;
-    color: #fff; /* White text */
-    text-align: center; /* Centers the title */
-    width: 100%; /* Ensures it spans the entire section */
-    display: block; /* Makes sure it behaves like a block element */
-    text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black; /* Adds a shadow for readability */
-    margin-top: -150px; /* Adjust this value to fix positioning if necessary */
+    margin-top: 2vh; /* Responsive margin */
 }
 
 
 #flavors {
     text-align: center;
-    padding: 50px 20px;
-    margin-top: -250px;
+    padding: 0 20px;
+    outline: 1px dashed red;
 }
 
 
@@ -166,19 +161,18 @@ section {
 
 
 .flavor-container {
-    text-align: center; /* Centers everything inside the container */
-    margin-bottom: 30px;
+    margin: 0 auto 50px;
 }
 
 .flavor-container img {
-    max-width: 100%; /* Adjust this as necessary to fit the design */
-    display: block; /* Ensures the image is a block element, which is necessary for centering */
-    margin: 0 auto; /* Centers the image horizontally */
+    max-width: 50%; /* Adjust image size */
+    height: auto;
 }
 
 
 .flavor-description {
-    padding: 20px;
+    max-width: 600px;
+    margin: 10px;
     border-radius: 10px; /* Optional: Rounds the corners */
     text-shadow:
         0.07em 0 black,
@@ -189,12 +183,12 @@ section {
 
 .flavor-description h3 {
     font-size: 24px; /* Adjust size as needed */
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .flavor-description p {
     font-size: 16px; /* Adjust size as needed */
-    margin: 10px 0;
+    margin-bottom: 20px;
 }
 
 /* Manifesto Section Title Alignment */
@@ -231,7 +225,7 @@ section {
 #pack {
     text-align: center;
     padding: 50px 20px;
-    margin-top: -250px;
+    margin-top: 1.5vh; /* Responsive margin */
 }
 
 .pack-container {
@@ -317,3 +311,63 @@ footer {
 .footer-logo {
     max-width: 100px;
 }
+
+/* Other CSS code above */
+
+/* Add media queries at the end */
+@media (max-width: 1200px) {
+    /* Adjust styles for screens smaller than 1200px */
+    header nav ul li a {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    #buy-now img {
+        width: 80%; /* Make the image scale proportionally */
+    }
+
+    .flavor-container img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for tablets and smaller devices */
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero h1 {
+        font-size: 24px; /* Adjust the text size */
+    }
+
+    .flavor-description h3 {
+        font-size: 20px; /* Scale headings */
+    }
+
+    .flavor-description p {
+        font-size: 14px; /* Scale text */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust styles for mobile phones */
+    header nav ul li {
+        margin: 10px 0; /* Add spacing for links */
+    }
+
+    #hero h1 {
+        font-size: 18px; /* Scale down text further */
+        margin-top: 10px;
+    }
+
+    .buy-button {
+        font-size: 16px; /* Adjust button text size */
+    }
+
+    .manifesto-text {
+        font-size: 16px; /* Reduce text size for manifesto */
+    }
+}
+
