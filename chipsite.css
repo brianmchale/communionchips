@@ -21,7 +21,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('Screen Shot 2024-09-13 at 1.06.21 PM.png'); /* Adjust path as necessary */
+    background-image: url('/Users/brianmchale/Documents/One Brain Together/CH✝️PS/Screen Shot 2024-09-13 at 1.06.21 PM.png'); /* Adjust path as necessary */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -101,7 +101,6 @@ section {
     margin: 0; /* Reset margins */
     padding: 20px 0; /* Internal spacing */
     text-align: center; /* Center content */
-    outline: 1px dashed red;
 }
 
 #buy-now img {
@@ -149,7 +148,6 @@ section {
 #flavors {
     text-align: center;
     padding: 0 20px;
-    outline: 1px dashed red;
 }
 
 
@@ -192,11 +190,15 @@ section {
 }
 
 /* Manifesto Section Title Alignment */
+#manifesto {
+    text-align: center;
+    //padding: 50px 20px;
+}
+
 .manifesto-section {
     text-align: center; /* Ensures that everything in the manifesto section is centered */
     padding: 20px 50px; /* Adds padding around the content for spacing */
     display: block; /* Overrides any flexbox settings that might be affecting layout */
-    margin-bottom: 250px;
 }
 
 .manifesto-title {
