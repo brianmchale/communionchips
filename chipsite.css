@@ -69,20 +69,11 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Main Content Sections */
-section {
-    margin-bottom: 50px; /* Adds spacing between sections */
-    width: 100%; /* Ensures the section fills the width */
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    text-align: center; /* Center the text inside the section */
-    padding: 20px 0;
-}
-
 #hero {
     padding: 60px 20px; /* Internal spacing */
     margin-bottom: 50px; /* Space below */
     text-align: center;
+    outline: 1px dashed red;
 }
 
 #hero h1 {
@@ -94,6 +85,27 @@ section {
         0 0.07em black,
         -0.07em 0 black,
         0 -0.07em black;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Keep the logo and text above the blurred background */
+    text-align: center;
+}
+
+.logo {
+    max-width: 90%;
+    z-index: 1;
+}
+
+/* Main Content Sections */
+section {
+    margin-bottom: 50px; /* Adds spacing between sections */
+    width: 100%; /* Ensures the section fills the width */
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text inside the section */
+    padding: 20px 0;
 }
 
 /* Buy Now Button Styling */
